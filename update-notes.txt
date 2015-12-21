@@ -1,0 +1,65 @@
+SmartAdmin AngularJs Version 1.7.0
+==============================
+
+- requireJS replaced with custom lazy load system
+- removed all couchPotato stuff:
+   classic style declarations for angular controllers, directives etc.
+- gulp(http://gulpjs.com) is used for building application (can be rewrited to grunt, but gulp is less verbose and faster)
+
+
+usage
+-----
+
+<pre>
+  git clone https://bitbucket.org/grigson/smartadmin-angularjs-version-2 smartadmin
+  cd smartadmin
+  npm install // to install all gulp required plugins
+  gulp
+</pre>
+
+check localhost:8888 to see app is working
+
+now gulp is watching for changes in *.js files in app directory and if any rebuilds project
+
+### build directory contains:
+  - app.js - smartadmin angular application (all modules, routes, directivesm=, controllers)
+  - vendor.js - lib files (angular, jquery, jquery-ui) required for app.js joined together to speedup loading 
+    list of vendors can be found (and edited) in app.scripts.json in prebuild section
+
+### app.scripts.json sections
+  - prebuild - described above
+
+  - paths - keys and paths for plugin scripts. Ex: <br />
+    <code> "bootstrap-markdown": "plugin/bootstrap-markdown/js/bootstrap-markdown.js" </code><br/>
+    script can be lazy-loaded by "bootstrap-markdown" key
+
+  - shim  -  used to describe dependencies between plugins. Ex: <br/>
+    <code> "bootstrap-markdown": { "deps": ["markdown", "to-markdown"]} </code> <br/>
+    when you lazy-load "bootstrap-markdown" dependencies will be loaded too
+
+lazy-load
+---------
+To lazy load scripts you can use *lazyScript* factoy. For example in ui-router state resolve:
+<pre>
+    .state('app.form.editors', {
+        url: '/form/editors',
+        data: {
+            title: 'Editors'
+        },
+        views: {
+            "content@app": {
+                templateUrl: 'app/modules/forms/views/form-editors.html'
+            }
+        },
+        resolve: {
+            scripts: function(lazyScript){
+                return lazyScript.register([
+                    'bootstrap-markdown',
+                    'summernote'
+                ])
+            }
+        }
+    })
+</pre>
+Here, before 'app.form.editors' state render bootstrap-markdown, summernote and dependencies will be loaded
+
