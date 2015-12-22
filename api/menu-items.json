@@ -6,16 +6,78 @@
         "icon":"home"
     },
     {
-        "title":"App Views",
+        "title":"Catalog",
         "href":"#",
-        "icon":"puzzle-piece",
+        "icon":"folder-open",
         "items": [
             {
-                "title":"Projects",
+                "title":"Tags",
                 "sref": "app.appViews.projects",
-                "icon":"file-text-o"
+                "icon":"tags"
+            }
+        ]
+    },
+    {
+        "title":"Import",
+        "href":"#",
+        "icon":"upload",
+        "items": [
+            {
+                "title":"Offers",
+                "sref": "app.appViews.projects",
+                "icon":"gift"
+            },
+            {
+                "title":"Products",
+                "sref": "app.appViews.projects",
+                "icon":"product-hunt"
+            },
+            {
+                "title":"Resources",
+                "sref": "app.appViews.projects",
+                "icon":"laptop"
+            }
+            ,
+            {
+                "title":"Prices",
+                "sref": "app.appViews.projects",
+                "icon":"money"
+            }
+        ]
+    },
+    {
+        "title":"Publish",
+        "href":"#",
+        "icon":"share"
+    },
+    {
+        "title":"Catalog Admin",
+        "href":"#",
+        "icon":"lock",
+        "items": [
+            {
+                "title":"Offer Types",
+                "sref": "app.appViews.projects",
+                "icon":"gift"
+            },
+            {
+                "title":"Products Types",
+                "sref": "app.appViews.projects",
+                "icon":"product-hunt"
+            },
+            {
+                "title":"Resources Types",
+                "sref": "app.appViews.projects",
+                "icon":"laptop"
+            }
+            ,
+            {
+                "title":"Lines",
+                "sref": "app.appViews.projects",
+                "icon":"line-chart"
             }
         ]
     }
+
   ]
 }

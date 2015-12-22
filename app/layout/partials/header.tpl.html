@@ -7,26 +7,26 @@
 
     <!-- Note: The activity badge color changes when clicked and resets the number to 0
     Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications -->
-    <span id="activity" class="activity-dropdown" activities-dropdown-toggle> 
+    <!--span id="activity" class="activity-dropdown" activities-dropdown-toggle> 
         <i class="fa fa-user"></i> 
         <b class="badge bg-color-red">21</b> 
-    </span>
-    <div smart-include="app/dashboard/activities/activities.html"></div>
+    </span-->
+    <!--div smart-include="app/dashboard/activities/activities.html"></div-->
 </div>
 
 
-<recent-projects></recent-projects>
+<!--recent-projects></recent-projects-->
 
 
 
 <!-- pulled right: nav area -->
 <div class="pull-right">
 
-    <!-- collapse menu button -->
-    <div id="hide-menu" class="btn-header pull-right">
+    <!-- collapse menu button to hide the left nav-->
+    <!--div id="hide-menu" class="btn-header pull-right">
         <span> <a toggle-menu title="Collapse Menu"><i
                 class="fa fa-reorder"></i></a> </span>
-    </div>
+    </div-->
     <!-- end collapse menu -->
 
     <!-- #MOBILE -->
@@ -66,7 +66,7 @@
     </ul>
 
     <!-- logout button -->
-    <div id="logout" class="btn-header transparent pull-right">
+    <div id="logout-permanent" class="btn-header transparent pull-right">
         <span> <a ui-sref="login" title="Sign Out" data-action="userLogout"
                   data-logout-msg="You can improve your security further after logging out by closing this opened browser"><i
                 class="fa fa-sign-out"></i></a> </span>
@@ -81,7 +81,7 @@
 
     <!-- input: search field -->
     <form action="#/search" class="header-search pull-right">
-        <input id="search-fld" type="text" name="param" placeholder="Find reports and more" data-autocomplete='[
+        <input id="search-fld" type="text" name="param" placeholder="Search in catalog" data-autocomplete='[
 					"ActionScript",
 					"AppleScript",
 					"Asp",
@@ -112,14 +112,14 @@
     <!-- end input: search field -->
 
     <!-- fullscreen button -->
-    <div id="fullscreen" class="btn-header transparent pull-right">
+    <!--div id="fullscreen" class="btn-header transparent pull-right">
         <span> <a full-screen title="Full Screen"><i
                 class="fa fa-arrows-alt"></i></a> </span>
-    </div>
+    </div-->
     <!-- end fullscreen button -->
 
     <!-- #Voice Command: Start Speech -->
-    <div id="speech-btn" class="btn-header transparent pull-right hidden-sm hidden-xs">
+    <!--div id="speech-btn" class="btn-header transparent pull-right hidden-sm hidden-xs">
         <div>
             <a title="Voice Command" id="voice-command-btn" speech-recognition><i class="fa fa-microphone"></i></a>
 
@@ -142,7 +142,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div-->
     <!-- end voice command -->
 
 

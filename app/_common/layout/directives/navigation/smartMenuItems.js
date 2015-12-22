@@ -19,7 +19,7 @@
                 if(item.href)
                     a.attr('href', item.href);
                 if(item.icon){
-                    i.attr('class', 'fa fa-lg fa-fw fa-'+item.icon);
+                    i.attr('class', 'fa fa-fw fa-'+item.icon);
                     a.append(i);
                 }
                 if(item.title){

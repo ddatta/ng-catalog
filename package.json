@@ -1,15 +1,15 @@
 {
-  "name": "smartadmin-angularjs-app",
+  "name": "ng-catalog-app",
   "version": "1.7.0",
-  "description": "Demo Application for AngularJS version of SmartAdmin application template",
+  "description": "LG Product Catalog Manager ",
   "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "https://grigson@bitbucket.org/grigson/smartadmin-angularjs-version-2.git/"
+    "url": "https://github.com/ddatta/ng-catalog.git/"
   },
   "keywords": [
     "angularjs",
-    "smartadmin"
+    "ng-catalog"
   ],
   "author": "",
   "license": "",
